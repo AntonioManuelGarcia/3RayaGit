@@ -3,6 +3,9 @@ Practica 10
 -Creamos el Repositorio en Github en la direccion 
 https://github.com/AntonioManuelGarcia/3RayaGit
 
+-Tambien se ha creado un repositorio para la parte de migrar el repositorio de svn a git en la direccion
+https://github.com/AntonioManuelGarcia/PasandoSvn
+
 -configuramos el nombre de usuario e email de forma global
 git config --global user.name AntonioManuelGarcia
 git config --global user.email amgf9@alu.ua.es
@@ -63,3 +66,12 @@ nano 3Line.cc
 git bisect bad  
 -hasta que llegamos el que lo tiene y lo arreglamos y ponemos
 git bisect good v1.0.0 
+
+-y volvemos al commit actual con 
+git bisect reset
+
+-para clonar un repositorio de Svn y pasarlo a git hacemos en un repositorio nuevo
+git svn clone http://svn.apache.org/repos/asf/subversion/trunk subversion
+
+-en este caso se ha elegido el propio repositorio de subversion alojado en los servidores de apache
+-despues se añade el origen remoto del repositorio en saco de no haberlo hecho antes y lo subimos a github
