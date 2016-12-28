@@ -18,11 +18,19 @@ int main(){
 	do{
 		cout << "indique su jugada: ";
 		cin >> jugada;
-		cout << endl << "indique la Coordenada x: ";
+		cout << endl << "indique la Coordenada x (1-3): ";
 		cin >> x;
-		cout << endl << "indique la Coordenada y: ";
+		while(x<1 || x>3){
+			cout << endl << "COORDENADA INCORRECTA! LA COORDENADA DEBE SER UN NUMERO ENTRE 1 Y 3" << endl << "Por favor indique la Coordenada x: ";
+			cin >> x;
+		}
+		cout << endl << "indique la Coordenada y (1-3): ";
 		cin >> y;
-		Tablero[x][y]=jugada;
+		while(y<1 || y>3){
+			cout << endl << "COORDENADA INCORRECTA! LA COORDENADA DEBE SER UN NUMERO ENTRE 1 Y 3" << endl << "Por favor indique la Coordenada y: ";
+			cin >> y;
+		}
+		Tablero[(x-1)][(y-1)]=jugada;
 		for(int i=0;i<3;i++){
 			for(int j=0;j<3;j++){
 				
