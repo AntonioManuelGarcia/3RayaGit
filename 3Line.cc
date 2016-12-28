@@ -18,9 +18,8 @@ int main(){
 
 	do{
 		jugador=cont%2;
-		cout << "jugador: " << jugador << endl;
-		cout << "indique su jugada: ";
-		cin >> jugada;
+		cout << "jugador: " << (jugador+1) << endl;
+		
 		cout << endl << "indique la Coordenada x (1-3): ";
 		cin >> x;
 		while(x<1 || x>3){
