@@ -33,7 +33,7 @@ int main(){
 			cout << endl << "COORDENADA INCORRECTA! LA COORDENADA DEBE SER UN NUMERO ENTRE 1 Y 3" << endl << "Por favor indique la Coordenada y: ";
 			cin >> y;
 		}
-		Tablero[(x-1)][(y-1)]=jugada;
+		Tablero[x][y]=jugada;
 		for(int i=0;i<3;i++){
 			for(int j=0;j<3;j++){
 				
