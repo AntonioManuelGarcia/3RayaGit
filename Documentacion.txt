@@ -1,0 +1,18 @@
+Practica 10
+
+-Creamos el Repositorio en Github en la direccion 
+https://github.com/AntonioManuelGarcia/3RayaGit
+
+git config --global user.name AntonioManuelGarcia
+git config --global user.email amgf9@alu.ua.es
+
+git config --global credential.helper cache
+
+-inicializamos el repositorio local
+git init
+
+-copiamos y añadimos al repositorio los archivos del proyecto 3Raya de la primera practica
+git add .
+
+-hacemos el primer commit y lo subimos al repositorio remoto
+git commit -m "version inicial"
