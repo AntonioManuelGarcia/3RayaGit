@@ -3,9 +3,11 @@ Practica 10
 -Creamos el Repositorio en Github en la direccion 
 https://github.com/AntonioManuelGarcia/3RayaGit
 
+-configuramos el nombre de usuario e email de forma global
 git config --global user.name AntonioManuelGarcia
 git config --global user.email amgf9@alu.ua.es
 
+-habilitamos la cache de credenciales para no tener que escribir la contraseña cada vez que hagamos push a remoto
 git config --global credential.helper cache
 
 -inicializamos el repositorio local
@@ -16,3 +18,33 @@ git add .
 
 -hacemos el primer commit y lo subimos al repositorio remoto
 git commit -m "version inicial"
+
+-etiquetamos el commit marcando que es la version 1.0.0
+git tag v1.0.0
+
+-subimos la rama master al repositorio remoto añadiendo primero el repositorio remoto
+git remote add origin https://github.com/AntonioManuelGarcia/3RayaGit
+
+git push -u origin master
+
+-creamos la rama Estable
+git checkout -b Estable
+
+-subimos la rama Estable a remoto
+git push -u origin Estable
+
+-configuramos algunos alias globales para hacer mas facil la navegacion entre ramas y el uso de commits
+git config --global alias.co checkout
+
+-y nos movemos a la rama master usando
+git co master
+
+-añadimos unos cuantos mas 
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.hist 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
+
+-y tambien se añade uno local para mi uso propio para mostar el log con la opcion --oneline que muestra solo la primera linea de los mensajes de commit para resumir
+git config alias.loone 'log --oneline'
+
