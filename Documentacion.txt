@@ -3,7 +3,7 @@ Practica 10
 -Creamos el Repositorio en Github en la direccion 
 https://github.com/AntonioManuelGarcia/3RayaGit
 
--Tambien se ha creado un repositorio para la parte de migrar el repositorio de svn a git en la direccion
+-Tambien se ha creado un repositorio para la parte de migrar el repositorio de svn a git en la direccion ya que ademas el proyecto es demasiado grande para poderlo subir a la entrega de practicas
 https://github.com/AntonioManuelGarcia/PasandoSvn
 
 -configuramos el nombre de usuario e email de forma global
