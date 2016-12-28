@@ -48,3 +48,18 @@ git config --global alias.hist 'log --pretty=format:"%h %ad | %s%d [%an]" --grap
 -y tambien se añade uno local para mi uso propio para mostar el log con la opcion --oneline que muestra solo la primera linea de los mensajes de commit para resumir
 git config alias.loone 'log --oneline'
 
+-ahora añadimos el codigo de las siguientes entregas de la Practica 1 en cada rama y vamos haciendo los commits y publicaciones necesarios
+git ci -am "correccion de error v1.0.2"
+git tag v1.0.2
+git push
+-dejamos sin cambiar un error de la linea 25 que se corregia inicialmente en la version 1.0.1 y donde se cambiaba Tablero[x][y]=jugada; por Tablero[(x-1)][(y-1)]=jugada; para luego hacer el bisect
+
+-una vez que tenemos esto hacemso bisect para detectar el error y cambiarlo en la rama master
+git bisect start
+-miramos el codigo a ver si esta el error con 
+nano 3Line.cc 
+
+-y si es un commit que lo tiene:
+git bisect bad  
+-hasta que llegamos el que lo tiene y lo arreglamos y ponemos
+git bisect good v1.0.0 
